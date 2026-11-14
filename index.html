@@ -1,0 +1,191 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Libros para regalar</title>
+<meta property="og:title" content="Libros para regalar"><meta property="og:description" content="19 libros usados que regalo. Escoge el tuyo y escríbeme por WhatsApp.">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f6f5f2;color:#222}
+header{max-width:1100px;margin:auto;padding:28px 16px 8px}h1{margin:0 0 8px;font-size:28px}
+header p{margin:0 0 14px;line-height:1.5;color:#444}
+.wa{display:inline-block;background:#25D366;color:#fff;text-decoration:none;font-weight:600;padding:12px 18px;border-radius:999px}
+.filtros{max-width:1100px;margin:auto;padding:12px 16px;display:flex;flex-wrap:wrap;gap:8px}
+.filtros button{border:1px solid #ccc;background:#fff;border-radius:999px;padding:7px 14px;font-size:14px;cursor:pointer}
+.filtros button.on{background:#222;color:#fff;border-color:#222}
+main{max-width:1100px;margin:auto;padding:8px 16px 40px;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:14px}
+@media(min-width:700px){main{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}}
+.card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);display:flex;flex-direction:column}
+.card img{width:100%;aspect-ratio:3/4;object-fit:cover;background:#eee}
+.card .b{padding:12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.num{font-size:12px;color:#888}.t{font-weight:700;line-height:1.25}.a{font-size:14px;color:#555}
+.cat{font-size:12px;color:#666}.d{font-size:14px;line-height:1.4;color:#333;flex:1}
+.q{margin-top:6px;text-align:center;background:#25D366;color:#fff;text-decoration:none;padding:9px;border-radius:10px;font-weight:600;font-size:14px}
+footer{text-align:center;color:#888;font-size:13px;padding:0 16px 30px}
+</style></head><body>
+<header><h1>Libros para regalar</h1>
+<p>Son todos usados y los regalo. Se retiran en mi casa en Mallorca Village, La Aurora (Daule). Para pedir uno, escríbeme por WhatsApp con el número del libro; el primero que escriba se lo lleva.</p>
+<a class="wa" href="https://wa.me/593988376138">Escribir por WhatsApp</a></header>
+<div class="filtros" id="f"></div><main id="g"></main>
+<footer>Rubén Torres</footer>
+<script>
+const LIBROS=[
+ {
+  "n": 1,
+  "titulo": "Autoliderazgo y el ejecutivo al minuto",
+  "autor": "Ken Blanchard, Susan Fowler y Laurence Hawkins",
+  "categoria": "Negocios y liderazgo",
+  "descripcion": "Guía práctica para dirigir el propio trabajo con las herramientas del «ejecutivo al minuto» y el liderazgo situacional.",
+  "reservado": false
+ },
+ {
+  "n": 2,
+  "titulo": "Últimos días en Berlín",
+  "autor": "Paloma Sánchez-Garnica",
+  "categoria": "Novela y literatura",
+  "descripcion": "Novela histórica, finalista del Premio Planeta, sobre una familia española atrapada en Berlín en los últimos años del nazismo.",
+  "reservado": false
+ },
+ {
+  "n": 3,
+  "titulo": "12 reglas para vivir",
+  "autor": "Jordan B. Peterson",
+  "categoria": "Desarrollo personal",
+  "descripcion": "Ensayo con doce principios para ordenar la vida, desde la responsabilidad personal hasta el sentido frente al caos.",
+  "reservado": false
+ },
+ {
+  "n": 4,
+  "titulo": "Psicología de ventas",
+  "autor": "Brian Tracy",
+  "categoria": "Negocios y liderazgo",
+  "descripcion": "Manual sobre las técnicas y la mentalidad que, según el autor, ayudan a vender más y con más confianza.",
+  "reservado": false
+ },
+ {
+  "n": 5,
+  "titulo": "La semana laboral de 4 horas",
+  "autor": "Timothy Ferriss",
+  "categoria": "Negocios y liderazgo",
+  "descripcion": "El libro de Ferriss sobre cómo aligerar el trabajo, automatizar tareas y liberar tiempo, con la idea de que no hace falta trabajar más.",
+  "reservado": false
+ },
+ {
+  "n": 6,
+  "titulo": "Storytelling with Data",
+  "autor": "Cole Nussbaumer Knaflic",
+  "categoria": "Negocios y liderazgo",
+  "descripcion": "Guía en inglés para presentar datos con claridad: cómo elegir gráficos, quitar ruido y contar una historia con la información.",
+  "reservado": false
+ },
+ {
+  "n": 7,
+  "titulo": "Cómo construir la carrera de su vida",
+  "autor": "Stephen R. Covey y Jennifer Colosimo",
+  "categoria": "Negocios y liderazgo",
+  "descripcion": "Covey y Colosimo proponen un método para alinear la carrera profesional con los principios y el potencial de cada persona.",
+  "reservado": false
+ },
+ {
+  "n": 8,
+  "titulo": "Salón 8: relatos de inspiración y liderazgo",
+  "autor": "Yokoi Kenji Díaz",
+  "categoria": "Negocios y liderazgo",
+  "descripcion": "Relatos de inspiración y liderazgo del conferencista Yokoi Kenji Díaz, pensados para motivar decisiones de vida y de trabajo.",
+  "reservado": false
+ },
+ {
+  "n": 9,
+  "titulo": "The Dangerous Book for Boys",
+  "autor": "Conn Iggulden y Hal Iggulden",
+  "categoria": "Otros",
+  "descripcion": "Compilación en inglés de aventuras, habilidades y curiosidades, pensada como un manual de descubrimientos.",
+  "reservado": false
+ },
+ {
+  "n": 10,
+  "titulo": "Principle-Centered Leadership",
+  "autor": "Stephen R. Covey",
+  "categoria": "Negocios y liderazgo",
+  "descripcion": "En inglés, Covey expone un liderazgo basado en principios, en lugar de en técnicas de corto plazo o en el control.",
+  "reservado": false
+ },
+ {
+  "n": 11,
+  "titulo": "Manual de importaciones y exportaciones del Ecuador 2024",
+  "autor": "Pudeleco",
+  "categoria": "Otros",
+  "descripcion": "Guía práctica 2024 sobre el régimen de importaciones y exportaciones del Ecuador, como referencia de comercio exterior.",
+  "reservado": false
+ },
+ {
+  "n": 12,
+  "titulo": "Tu mejor versión en 12 semanas",
+  "autor": "Sanjay Gupta",
+  "categoria": "Desarrollo personal",
+  "descripcion": "Programa de doce semanas para mejorar hábitos y acercarse a una versión más saludable y disciplinada de uno mismo.",
+  "reservado": false
+ },
+ {
+  "n": 13,
+  "titulo": "Los siete maridos de Evelyn Hugo",
+  "autor": "Taylor Jenkins Reid",
+  "categoria": "Novela y literatura",
+  "descripcion": "Novela en la que una estrella de Hollywood relata su vida y sus siete matrimonios a una periodista a la que casi no conoce.",
+  "reservado": false
+ },
+ {
+  "n": 14,
+  "titulo": "Juyungo",
+  "autor": "Adalberto Ortiz",
+  "categoria": "Novela y literatura",
+  "descripcion": "Novela clásica ecuatoriana sobre un hombre negro de Esmeraldas y la discriminación que enfrenta. Edición de la colección Antares.",
+  "reservado": false
+ },
+ {
+  "n": 15,
+  "titulo": "La increíble y triste historia de la cándida Eréndira y de su abuela desalmada",
+  "autor": "Gabriel García Márquez",
+  "categoria": "Novela y literatura",
+  "descripcion": "Relato de García Márquez sobre una joven explotada por su abuela en un pueblo del Caribe, en la línea del realismo mágico.",
+  "reservado": false
+ },
+ {
+  "n": 16,
+  "titulo": "Las mujeres que aman demasiado",
+  "autor": "Robin Norwood",
+  "categoria": "Desarrollo personal",
+  "descripcion": "Ensayo sobre el patrón de entregarse en exceso en las relaciones y cómo empezar a salir de él.",
+  "reservado": false
+ },
+ {
+  "n": 17,
+  "titulo": "El mundo de Sofía",
+  "autor": "Jostein Gaarder",
+  "categoria": "Novela y literatura",
+  "descripcion": "Novela que recorre la historia de la filosofía a través de las cartas y los enigmas que recibe una joven llamada Sofía.",
+  "reservado": false
+ },
+ {
+  "n": 18,
+  "titulo": "Manual de Carreño: urbanidad y buenas maneras",
+  "autor": "Manuel Antonio Carreño",
+  "categoria": "Otros",
+  "descripcion": "El clásico de urbanidad y buenas maneras, una guía tradicional de cortesía y conducta social.",
+  "reservado": false
+ },
+ {
+  "n": 19,
+  "titulo": "El lenguaje corporal",
+  "autor": "Günther Rebel",
+  "categoria": "Desarrollo personal",
+  "descripcion": "Introducción a los gestos, las posturas y las señales no verbales, y a cómo interpretarlos en la vida diaria.",
+  "reservado": false
+ }
+];
+const cats=["Todos","Negocios y liderazgo","Desarrollo personal","Novela y literatura","Otros"];
+let sel="Todos";const disp=LIBROS.filter(l=>!l.reservado);
+function pad(n){return String(n).padStart(2,"0")}
+function render(){
+ document.getElementById("f").innerHTML=cats.map(c=>{const k=c=="Todos"?disp.length:disp.filter(l=>l.categoria==c).length;return k?`<button class="${c==sel?"on":""}" data-c="${c}">${c} (${k})</button>`:""}).join("");
+ document.querySelectorAll("#f button").forEach(b=>b.onclick=()=>{sel=b.dataset.c;render()});
+ document.getElementById("g").innerHTML=disp.filter(l=>sel=="Todos"||l.categoria==sel).map(l=>{const msg=encodeURIComponent(`Hola Rubén, me interesa el libro #${l.n}: ${l.titulo}`);return `<div class="card"><img loading="lazy" src="img/${pad(l.n)}.jpg" alt="Portada de ${l.titulo}"><div class="b"><div class="num">#${l.n}</div><div class="t">${l.titulo}</div><div class="a">${l.autor}</div><div class="cat">${l.categoria}</div><div class="d">${l.descripcion}</div><a class="q" href="https://wa.me/593988376138?text=${msg}">Lo quiero</a></div></div>`}).join("");
+}
+render();
+</script></body></html>
